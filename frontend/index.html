@@ -1,0 +1,477 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Học Phần - HCMUTE</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background-color: #004085;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            text-align: center;
+            background-color: #002752;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+            .sidebar-header h2 {
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+
+            .sidebar-header p {
+                font-size: 12px;
+                color: #b8daff;
+            }
+
+        .menu-list {
+            list-style: none;
+            padding: 15px 0;
+            flex-grow: 1;
+        }
+
+        .menu-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 14px;
+            border-left: 4px solid transparent;
+        }
+
+            .menu-item:hover, .menu-item.active {
+                background-color: #0056b3;
+                border-left-color: #ffc107;
+                color: white;
+            }
+
+        /* Main Content */
+        .main-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .topbar {
+            background-color: #004085;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+            .topbar h1 {
+                font-size: 20px;
+                font-weight: 500;
+                text-transform: uppercase;
+                margin: 0;
+            }
+
+        .content-body {
+            padding: 30px;
+            flex-grow: 1;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            display: none;
+        }
+
+            .card.active {
+                display: block;
+            }
+
+            .card h3 {
+                margin-bottom: 20px;
+                color: #004085;
+                border-bottom: 2px solid #e9ecef;
+                padding-bottom: 10px;
+            }
+
+        .form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 13px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+            input:focus {
+                outline: none;
+                border-color: #80bdff;
+                box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+            }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+            .btn:hover {
+                background-color: #0056b3;
+            }
+
+        .btn-danger {
+            background-color: #dc3545;
+        }
+
+            .btn-danger:hover {
+                background-color: #c82333;
+            }
+
+        .btn-warning {
+            background-color: #ffc107;
+            color: #212529;
+        }
+
+            .btn-warning:hover {
+                background-color: #e0a800;
+            }
+
+        /* Khung hiển thị kết quả */
+        .result-box {
+            margin-top: 20px;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+            .info-table th, .info-table td {
+                border: 1px solid #dee2e6;
+                padding: 8px 12px;
+                text-align: left;
+            }
+
+            .info-table th {
+                background-color: #e9ecef;
+                color: #495057;
+                width: 35%;
+            }
+
+        .badge-success {
+            background-color: #28a745;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .badge-danger {
+            background-color: #dc3545;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .badge-warning {
+            background-color: #ffc107;
+            color: #212529;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        /* Dropdown Gợi ý môn học */
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            max-height: 200px;
+            overflow-y: auto;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+            border-radius: 0 0 4px 4px;
+        }
+
+            .autocomplete-items div {
+                padding: 10px;
+                cursor: pointer;
+                border-bottom: 1px solid #d4d4d4;
+                font-size: 13px;
+            }
+
+                .autocomplete-items div:hover {
+                    background-color: #e9e9e9;
+                }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>HCMUTE</h2>
+        </div>
+        <ul class="menu-list">
+            <li class="menu-item active" onclick="switchTab('tab-dangky', this)">1. Đăng ký học phần</li>
+            <li class="menu-item" onclick="switchTab('tab-huy', this)">2. Hủy đăng ký học phần</li>
+            <li class="menu-item" onclick="switchTab('tab-tkb', this)">3. Xem thời khóa biểu</li>
+            <li class="menu-item" onclick="switchTab('tab-tracuu', this)">4. Tra cứu học phần</li>
+        </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-container">
+        <div class="topbar">
+            <h1>ĐẠI HỌC SƯ PHẠM KỸ THUẬT TP. HỒ CHÍ MINH</h1>
+        </div>
+
+        <div class="content-body">
+            <!-- Tab 1: Đăng ký -->
+            <div id="tab-dangky" class="card active">
+                <h3>Đăng Ký Học Phần</h3>
+                <div class="form-group"><label>Mã sinh viên:</label><input type="text" id="dk-masv" placeholder="VD: 24110001"></div>
+                <div class="form-group">
+                    <label>Mã môn học (Nhập để hiện gợi ý):</label>
+                    <input type="text" id="dk-mahp" placeholder="VD: CS101" autocomplete="off" oninput="showSuggestions(this['value'], 'dk-sugg', 'dk-mahp')">
+                    <div id="dk-sugg" class="autocomplete-items"></div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn" onclick="dangKyMon()">Xác nhận đăng ký</button>
+                    <button class="btn btn-warning" onclick="thucHienUndo('res-dangky')">Hoàn tác (Undo)</button>
+                </div>
+                <div class="result-box" id="res-dangky" style="display:none;"></div>
+            </div>
+
+            <!-- Tab 2: Hủy môn -->
+            <div id="tab-huy" class="card">
+                <h3>Hủy Đăng Ký Học Phần</h3>
+                <div class="form-group"><label>Mã sinh viên:</label><input type="text" id="huy-masv" placeholder="VD: 24110001"></div>
+                <div class="form-group">
+                    <label>Mã môn học (Nhập để hiện gợi ý):</label>
+                    <input type="text" id="huy-mahp" placeholder="VD: CS101" autocomplete="off" oninput="showSuggestions(this['value'], 'huy-sugg', 'huy-mahp')">
+                    <div id="huy-sugg" class="autocomplete-items"></div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-danger" onclick="huyMon()">Xác nhận hủy</button>
+                    <button class="btn btn-warning" onclick="thucHienUndo('res-huy')">Hoàn tác (Undo)</button>
+                </div>
+                <div class="result-box" id="res-huy" style="display:none;"></div>
+            </div>
+
+            <!-- Tab 3: Xem TKB -->
+            <div id="tab-tkb" class="card">
+                <h3>Thời Khóa Biểu Sinh Viên</h3>
+                <div class="form-group"><label>Mã sinh viên:</label><input type="text" id="tkb-masv" placeholder="VD: 24110001"></div>
+                <button class="btn" onclick="xemTKB()">Xem Thời Khóa Biểu</button>
+                <div class="result-box" id="res-tkb" style="display:none;"></div>
+            </div>
+
+            <!-- Tab 4: Tra cứu -->
+            <div id="tab-tracuu" class="card">
+                <h3>Tra Cứu Học Phần</h3>
+                <div class="form-group">
+                    <label>Mã học phần (Nhập để hiện gợi ý):</label>
+                    <input type="text" id="tc-mahp" placeholder="VD: CS101" autocomplete="off" oninput="showSuggestions(this['value'], 'tc-sugg', 'tc-mahp')">
+                    <div id="tc-sugg" class="autocomplete-items"></div>
+                </div>
+                <button class="btn" onclick="traCuu()">Tra cứu thông tin</button>
+                <div class="result-box" id="res-tracuu" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+                // @ts-nocheck
+
+                // Chuyển Tab
+                function switchTab(tabId, element) {
+                    var cards = document.querySelectorAll('.card');
+                    for (var i = 0; i < cards.length; i++) cards[i].classList.remove('active');
+                    var menuItems = document.querySelectorAll('.menu-item');
+                    for (var j = 0; j < menuItems.length; j++) menuItems[j].classList.remove('active');
+                    var targetTab = document.getElementById(tabId);
+                    if (targetTab) targetTab.classList.add('active');
+                    if (element) element.classList.add('active');
+                }
+
+                // Hiển thị kết quả
+                function showResult(elementId, htmlContent) {
+                    var box = document.getElementById(elementId);
+                    if (box) { box.style.display = 'block'; box.innerHTML = htmlContent; }
+                }
+
+                // Hàm Gợi Ý (Autocomplete) gọi trực tiếp API
+                async function showSuggestions(val, boxId, inputId) {
+                    var box = document.getElementById(boxId);
+                    if (!box) return;
+                    box.innerHTML = '';
+                    if (!val || val.trim() === '') return;
+                    try {
+                        var res = await fetch('/api/goiy?tiento=' + encodeURIComponent(val.trim()));
+                        var data = await res.json();
+                        if (data.courses && data.courses.length > 0) {
+                            for(var m = 0; m < data.courses.length; m++) {
+                                var div = document.createElement('div');
+                                div.innerHTML = "<b>" + data.courses[m].id + "</b> - " + data.courses[m].name;
+                                div.setAttribute("data-id", data.courses[m].id);
+                                div.onclick = function() {
+                                    var inp = document.getElementById(inputId);
+                                    if(inp) inp['value'] = this.getAttribute("data-id");
+                                    box.innerHTML = '';
+                                };
+                                box.appendChild(div);
+                            }
+                        }
+                    } catch (err) { console.error("Lỗi gọi API gợi ý:", err); }
+                }
+
+                // Đóng hộp gợi ý khi click ra ngoài
+                document.addEventListener("click", function (e) {
+                    var boxes = document.querySelectorAll('.autocomplete-items');
+                    for(var i = 0; i < boxes.length; i++) {
+                        if (e.target !== boxes[i] && !boxes[i].contains(e.target)) {
+                            boxes[i].innerHTML = '';
+                        }
+                    }
+                });
+
+                // Đăng Ký Môn
+                async function dangKyMon() {
+                    var inputSV = document.getElementById('dk-masv');
+                    var inputHP = document.getElementById('dk-mahp');
+                    var masv = inputSV ? inputSV['value'].trim() : '';
+                    var mahp = inputHP ? inputHP['value'].trim() : '';
+                    if (!masv || !mahp) { alert('Vui lòng điền đầy đủ thông tin!'); return; }
+                    try {
+                        var res = await fetch('/api/dangky?masv=' + masv + '&mahp=' + mahp);
+                        var data = await res.json();
+                        showResult('res-dangky', '<span class="badge-success">Thành công</span> ' + (data.message || 'Đăng ký học phần thành công!'));
+                    } catch (err) { showResult('res-dangky', '<span class="badge-danger">Lỗi</span> Không kết nối được Server!'); }
+                }
+
+                // Hủy Môn
+                async function huyMon() {
+                    var inputSV = document.getElementById('huy-masv');
+                    var inputHP = document.getElementById('huy-mahp');
+                    var masv = inputSV ? inputSV['value'].trim() : '';
+                    var mahp = inputHP ? inputHP['value'].trim() : '';
+                    if (!masv || !mahp) { alert('Vui lòng điền đầy đủ thông tin!'); return; }
+                    try {
+                        var res = await fetch('/api/huy?masv=' + masv + '&mahp=' + mahp);
+                        var data = await res.json();
+                        showResult('res-huy', '<span class="badge-success">Thành công</span> ' + (data.message || 'Hủy môn học thành công!'));
+                    } catch (err) { showResult('res-huy', '<span class="badge-danger">Lỗi</span> Không kết nối được Server!'); }
+                }
+
+                // Hoàn tác (Undo) dùng chung cho các Tab
+                async function thucHienUndo(resBoxId) {
+                    try {
+                        var res = await fetch('/api/undo');
+                        var data = await res.json();
+                        showResult(resBoxId, '<span class="badge-warning">Hoàn tác</span> ' + (data.message || 'Đã hoàn tác!'));
+                    } catch (err) { showResult(resBoxId, '<span class="badge-danger">Lỗi</span> Không kết nối được Server!'); }
+                }
+
+                // Xem TKB
+                async function xemTKB() {
+                    var inputSV = document.getElementById('tkb-masv');
+                    var masv = inputSV ? inputSV['value'].trim() : '';
+                    if (!masv) { alert('Vui lòng nhập mã sinh viên!'); return; }
+                    try {
+                        var res = await fetch('/api/student?id=' + masv);
+                        var data = await res.json();
+                        if(data.error) { showResult('res-tkb', '<span class="badge-danger">Lỗi</span> ' + data.error); return; }
+                        var html = '<b>Mã SV:</b> ' + data.id + ' | <b>Họ tên:</b> ' + data.name + '<br><b>Số môn đã đăng ký:</b> ' + data.regCount;
+                        if(data.courses && data.courses.length > 0) {
+                            html += '<table class="info-table"><tr><th>STT</th><th>Mã Môn Học Đã Đăng Ký</th></tr>';
+                            for(var k = 0; k < data.courses.length; k++) {
+                                html += '<tr><td>' + (k + 1) + '</td><td><b>' + data.courses[k] + '</b></td></tr>';
+                            }
+                            html += '</table>';
+                        } else {
+                            html += '<p style="margin-top:10px; color:#666;">Sinh viên chưa đăng ký môn học nào.</p>';
+                        }
+                        showResult('res-tkb', html);
+                    } catch (err) { showResult('res-tkb', '<span class="badge-danger">Lỗi</span> Không kết nối được Server!'); }
+                }
+
+                // Tra Cứu
+                async function traCuu() {
+                    var inputHP = document.getElementById('tc-mahp');
+                    var mahp = inputHP ? inputHP['value'].trim() : '';
+                    if (!mahp) { alert('Vui lòng nhập mã học phần!'); return; }
+                    try {
+                        var res = await fetch('/api/course?id=' + mahp);
+                        var data = await res.json();
+                        if(data.error) { showResult('res-tracuu', '<span class="badge-danger">Lỗi</span> ' + data.error); return; }
+                        var html = '<table class="info-table">' +
+                            '<tr><th>Mã học phần</th><td>' + data.id + '</td></tr>' +
+                            '<tr><th>Tên học phần</th><td>' + data.name + '</td></tr>' +
+                            '<tr><th>Số tín chỉ</th><td>' + data.credits + '</td></tr>' +
+                            '<tr><th>Sĩ số hiện tại / Tối đa</th><td>' + data.currentEnrolled + ' / ' + data.maxCapacity + '</td></tr>' +
+                            '<tr><th>Lịch học</th><td>' + data.lichHoc + '</td></tr>' +
+                        '</table>';
+                        showResult('res-tracuu', html);
+                    } catch (err) { showResult('res-tracuu', '<span class="badge-danger">Lỗi</span> Không kết nối được Server!'); }
+                }
+    </script>
+</body>
+</html>
