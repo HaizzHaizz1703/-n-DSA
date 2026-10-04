@@ -1,0 +1,702 @@
+[
+    {
+        "id": "24110001",
+        "name": "Nguyen Van 1",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "CS101,CS201"
+    },
+    {
+        "id": "24110002",
+        "name": "Le Thi 2",
+        "maxCourses": 4,
+        "regCount": 1,
+        "courses": "CS102"
+    },
+    {
+        "id": "24110003",
+        "name": "Tran Van 3",
+        "maxCourses": 6,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110004",
+        "name": "Pham Thi 4",
+        "maxCourses": 5,
+        "regCount": 3,
+        "courses": "CS101,CS102,MA101"
+    },
+    {
+        "id": "24110005",
+        "name": "Hoang Van 5",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "CS202,MA103"
+    },
+    {
+        "id": "24110006",
+        "name": "Ngo Thi 6",
+        "maxCourses": 7,
+        "regCount": 4,
+        "courses": "SE201,IS201,CS204,CS301"
+    },
+    {
+        "id": "24110007",
+        "name": "Do Van 7",
+        "maxCourses": 5,
+        "regCount": 1,
+        "courses": "CS203"
+    },
+    {
+        "id": "24110008",
+        "name": "Bui Thi 8",
+        "maxCourses": 5,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110009",
+        "name": "Vu Van 9",
+        "maxCourses": 6,
+        "regCount": 2,
+        "courses": "LL101,LL105"
+    },
+    {
+        "id": "24110010",
+        "name": "Dang Thi 10",
+        "maxCourses": 5,
+        "regCount": 3,
+        "courses": "MA101,MA102,MA103"
+    },
+    {
+        "id": "24110011",
+        "name": "Nguyen Van 11",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "CS302,CS303"
+    },
+    {
+        "id": "24110012",
+        "name": "Le Thi 12",
+        "maxCourses": 6,
+        "regCount": 5,
+        "courses": "CS101,CS102,CS201,CS202,SE201"
+    },
+    {
+        "id": "24110013",
+        "name": "Tran Van 13",
+        "maxCourses": 5,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110014",
+        "name": "Pham Thi 14",
+        "maxCourses": 4,
+        "regCount": 1,
+        "courses": "CS309"
+    },
+    {
+        "id": "24110015",
+        "name": "Hoang Van 15",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "SE302,SE303"
+    },
+    {
+        "id": "24110016",
+        "name": "Ngo Thi 16",
+        "maxCourses": 6,
+        "regCount": 3,
+        "courses": "IS201,IS202,CS203"
+    },
+    {
+        "id": "24110017",
+        "name": "Do Van 17",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "CS310,CS311"
+    },
+    {
+        "id": "24110018",
+        "name": "Bui Thi 18",
+        "maxCourses": 5,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110019",
+        "name": "Vu Van 19",
+        "maxCourses": 7,
+        "regCount": 4,
+        "courses": "PH101,PH102,MA201,MA202"
+    },
+    {
+        "id": "24110020",
+        "name": "Dang Thi 20",
+        "maxCourses": 5,
+        "regCount": 1,
+        "courses": "IS301"
+    },
+    {
+        "id": "24110021",
+        "name": "Nguyen Van 21",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "CS101,LL101"
+    },
+    {
+        "id": "24110022",
+        "name": "Le Thi 22",
+        "maxCourses": 6,
+        "regCount": 2,
+        "courses": "CS201,MA101"
+    },
+    {
+        "id": "24110023",
+        "name": "Tran Van 23",
+        "maxCourses": 5,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110024",
+        "name": "Pham Thi 24",
+        "maxCourses": 4,
+        "regCount": 3,
+        "courses": "IS304,IS305,CS306"
+    },
+    {
+        "id": "24110025",
+        "name": "Hoang Van 25",
+        "maxCourses": 5,
+        "regCount": 1,
+        "courses": "LL105"
+    },
+    {
+        "id": "24110026",
+        "name": "Ngo Thi 26",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "CS301,CS302"
+    },
+    {
+        "id": "24110027",
+        "name": "Do Van 27",
+        "maxCourses": 6,
+        "regCount": 4,
+        "courses": "SE202,SE203,IS201,IS202"
+    },
+    {
+        "id": "24110028",
+        "name": "Bui Thi 28",
+        "maxCourses": 5,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110029",
+        "name": "Vu Van 29",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "LL102,LL103"
+    },
+    {
+        "id": "24110030",
+        "name": "Dang Thi 30",
+        "maxCourses": 7,
+        "regCount": 5,
+        "courses": "CS204,CS205,MA101,MA102,MA103"
+    },
+    {
+        "id": "24110031",
+        "name": "Nguyen Van 31",
+        "maxCourses": 5,
+        "regCount": 1,
+        "courses": "CS101"
+    },
+    {
+        "id": "24110032",
+        "name": "Le Thi 32",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "SE301,SE302"
+    },
+    {
+        "id": "24110033",
+        "name": "Tran Van 33",
+        "maxCourses": 6,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110034",
+        "name": "Pham Thi 34",
+        "maxCourses": 5,
+        "regCount": 3,
+        "courses": "CS310,CS311,SE307"
+    },
+    {
+        "id": "24110035",
+        "name": "Hoang Van 35",
+        "maxCourses": 4,
+        "regCount": 2,
+        "courses": "LL104,LL105"
+    },
+    {
+        "id": "24110036",
+        "name": "Ngo Thi 36",
+        "maxCourses": 5,
+        "regCount": 1,
+        "courses": "SE306"
+    },
+    {
+        "id": "24110037",
+        "name": "Do Van 37",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "CS203,CS204"
+    },
+    {
+        "id": "24110038",
+        "name": "Bui Thi 38",
+        "maxCourses": 6,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110039",
+        "name": "Vu Van 39",
+        "maxCourses": 5,
+        "regCount": 4,
+        "courses": "CS101,CS102,CS201,CS202"
+    },
+    {
+        "id": "24110040",
+        "name": "Dang Thi 40",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "PH101,PH102"
+    },
+    {
+        "id": "24110041",
+        "name": "Nguyen Van 41",
+        "maxCourses": 7,
+        "regCount": 1,
+        "courses": "SE201"
+    },
+    {
+        "id": "24110042",
+        "name": "Le Thi 42",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "IS201,IS301"
+    },
+    {
+        "id": "24110043",
+        "name": "Tran Van 43",
+        "maxCourses": 5,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110044",
+        "name": "Pham Thi 44",
+        "maxCourses": 6,
+        "regCount": 3,
+        "courses": "CS301,CS303,CS305"
+    },
+    {
+        "id": "24110045",
+        "name": "Hoang Van 45",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "LL101,LL102"
+    },
+    {
+        "id": "24110046",
+        "name": "Ngo Thi 46",
+        "maxCourses": 4,
+        "regCount": 1,
+        "courses": "IS304"
+    },
+    {
+        "id": "24110047",
+        "name": "Do Van 47",
+        "maxCourses": 5,
+        "regCount": 4,
+        "courses": "MA101,MA102,MA103,MA104"
+    },
+    {
+        "id": "24110048",
+        "name": "Bui Thi 48",
+        "maxCourses": 5,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110049",
+        "name": "Vu Van 49",
+        "maxCourses": 6,
+        "regCount": 2,
+        "courses": "CS308,CS309"
+    },
+    {
+        "id": "24110050",
+        "name": "Dang Thi 50",
+        "maxCourses": 5,
+        "regCount": 3,
+        "courses": "CS101,CS204,CS301"
+    },
+    {
+        "id": "24110051",
+        "name": "Nguyen Van 51",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "CS202,SE202"
+    },
+    {
+        "id": "24110052",
+        "name": "Le Thi 52",
+        "maxCourses": 5,
+        "regCount": 1,
+        "courses": "IS201"
+    },
+    {
+        "id": "24110053",
+        "name": "Tran Van 53",
+        "maxCourses": 6,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110054",
+        "name": "Pham Thi 54",
+        "maxCourses": 5,
+        "regCount": 4,
+        "courses": "SE301,SE302,SE303,SE304"
+    },
+    {
+        "id": "24110055",
+        "name": "Hoang Van 55",
+        "maxCourses": 7,
+        "regCount": 2,
+        "courses": "LL103,LL104"
+    },
+    {
+        "id": "24110056",
+        "name": "Ngo Thi 56",
+        "maxCourses": 5,
+        "regCount": 1,
+        "courses": "CS307"
+    },
+    {
+        "id": "24110057",
+        "name": "Do Van 57",
+        "maxCourses": 5,
+        "regCount": 3,
+        "courses": "CS101,CS201,SE201"
+    },
+    {
+        "id": "24110058",
+        "name": "Bui Thi 58",
+        "maxCourses": 4,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110059",
+        "name": "Vu Van 59",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "PH101,MA201"
+    },
+    {
+        "id": "24110060",
+        "name": "Dang Thi 60",
+        "maxCourses": 6,
+        "regCount": 2,
+        "courses": "CS310,CS312"
+    },
+    {
+        "id": "24110061",
+        "name": "Nguyen Van 61",
+        "maxCourses": 5,
+        "regCount": 1,
+        "courses": "CS102"
+    },
+    {
+        "id": "24110062",
+        "name": "Le Thi 62",
+        "maxCourses": 5,
+        "regCount": 3,
+        "courses": "MA101,MA102,PH101"
+    },
+    {
+        "id": "24110063",
+        "name": "Tran Van 63",
+        "maxCourses": 5,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110064",
+        "name": "Pham Thi 64",
+        "maxCourses": 6,
+        "regCount": 4,
+        "courses": "IS301,IS302,IS303,LL101"
+    },
+    {
+        "id": "24110065",
+        "name": "Hoang Van 65",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "IS304,IS305"
+    },
+    {
+        "id": "24110066",
+        "name": "Ngo Thi 66",
+        "maxCourses": 5,
+        "regCount": 1,
+        "courses": "CS203"
+    },
+    {
+        "id": "24110067",
+        "name": "Do Van 67",
+        "maxCourses": 4,
+        "regCount": 2,
+        "courses": "SE203,SE305"
+    },
+    {
+        "id": "24110068",
+        "name": "Bui Thi 68",
+        "maxCourses": 5,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110069",
+        "name": "Vu Van 69",
+        "maxCourses": 7,
+        "regCount": 3,
+        "courses": "CS101,CS204,LL105"
+    },
+    {
+        "id": "24110070",
+        "name": "Dang Thi 70",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "CS309,CS313"
+    },
+    {
+        "id": "24110071",
+        "name": "Nguyen Van 71",
+        "maxCourses": 5,
+        "regCount": 1,
+        "courses": "MA101"
+    },
+    {
+        "id": "24110072",
+        "name": "Le Thi 72",
+        "maxCourses": 6,
+        "regCount": 4,
+        "courses": "CS101,CS201,IS201,CS203"
+    },
+    {
+        "id": "24110073",
+        "name": "Tran Van 73",
+        "maxCourses": 5,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110074",
+        "name": "Pham Thi 74",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "CS301,CS304"
+    },
+    {
+        "id": "24110075",
+        "name": "Hoang Van 75",
+        "maxCourses": 5,
+        "regCount": 3,
+        "courses": "LL101,LL102,LL103"
+    },
+    {
+        "id": "24110076",
+        "name": "Ngo Thi 76",
+        "maxCourses": 4,
+        "regCount": 1,
+        "courses": "SE302"
+    },
+    {
+        "id": "24110077",
+        "name": "Do Van 77",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "MA102,MA103"
+    },
+    {
+        "id": "24110078",
+        "name": "Bui Thi 78",
+        "maxCourses": 6,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110079",
+        "name": "Vu Van 79",
+        "maxCourses": 5,
+        "regCount": 3,
+        "courses": "CS308,CS310,CS311"
+    },
+    {
+        "id": "24110080",
+        "name": "Dang Thi 80",
+        "maxCourses": 5,
+        "regCount": 1,
+        "courses": "CS101"
+    },
+    {
+        "id": "24110081",
+        "name": "Nguyen Van 81",
+        "maxCourses": 7,
+        "regCount": 2,
+        "courses": "PH102,MA202"
+    },
+    {
+        "id": "24110082",
+        "name": "Le Thi 82",
+        "maxCourses": 5,
+        "regCount": 4,
+        "courses": "CS102,CS202,SE202,IS201"
+    },
+    {
+        "id": "24110083",
+        "name": "Tran Van 83",
+        "maxCourses": 5,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110084",
+        "name": "Pham Thi 84",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "SE301,SE304"
+    },
+    {
+        "id": "24110085",
+        "name": "Hoang Van 85",
+        "maxCourses": 4,
+        "regCount": 1,
+        "courses": "LL105"
+    },
+    {
+        "id": "24110086",
+        "name": "Ngo Thi 86",
+        "maxCourses": 5,
+        "regCount": 3,
+        "courses": "MA101,PH101,LL101"
+    },
+    {
+        "id": "24110087",
+        "name": "Do Van 87",
+        "maxCourses": 6,
+        "regCount": 2,
+        "courses": "CS307,SE306"
+    },
+    {
+        "id": "24110088",
+        "name": "Bui Thi 88",
+        "maxCourses": 5,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110089",
+        "name": "Vu Van 89",
+        "maxCourses": 5,
+        "regCount": 4,
+        "courses": "LL102,LL103,LL104,LL105"
+    },
+    {
+        "id": "24110090",
+        "name": "Dang Thi 90",
+        "maxCourses": 5,
+        "regCount": 1,
+        "courses": "CS201"
+    },
+    {
+        "id": "24110091",
+        "name": "Nguyen Van 91",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "CS204,CS205"
+    },
+    {
+        "id": "24110092",
+        "name": "Le Thi 92",
+        "maxCourses": 7,
+        "regCount": 3,
+        "courses": "CS101,MA101,CS301"
+    },
+    {
+        "id": "24110093",
+        "name": "Tran Van 93",
+        "maxCourses": 5,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110094",
+        "name": "Pham Thi 94",
+        "maxCourses": 4,
+        "regCount": 2,
+        "courses": "IS301,IS303"
+    },
+    {
+        "id": "24110095",
+        "name": "Hoang Van 95",
+        "maxCourses": 5,
+        "regCount": 1,
+        "courses": "CS309"
+    },
+    {
+        "id": "24110096",
+        "name": "Ngo Thi 96",
+        "maxCourses": 5,
+        "regCount": 4,
+        "courses": "IS201,IS202,CS203,CS204"
+    },
+    {
+        "id": "24110097",
+        "name": "Do Van 97",
+        "maxCourses": 6,
+        "regCount": 2,
+        "courses": "IS304,CS306"
+    },
+    {
+        "id": "24110098",
+        "name": "Bui Thi 98",
+        "maxCourses": 5,
+        "regCount": 0,
+        "courses": ""
+    },
+    {
+        "id": "24110099",
+        "name": "Vu Van 99",
+        "maxCourses": 5,
+        "regCount": 3,
+        "courses": "CS310,CS312,CS313"
+    },
+    {
+        "id": "24110100",
+        "name": "Dang Thi 100",
+        "maxCourses": 5,
+        "regCount": 2,
+        "courses": "LL101,LL105"
+    }
+]
